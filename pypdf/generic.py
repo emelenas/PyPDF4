@@ -1024,7 +1024,7 @@ class ContentStream(DecodedStreamObject):
                 while peek not in (b_("\r"), b_("\n")):
                     peek = stream.read(1)
             else:
-                operands.append(readObject(stream, None))
+                operands.append(readObject(stream, self.pdf))
 
     def _readInlineImage(self, stream):
         # Begin reading just after the "BI" - begin image
